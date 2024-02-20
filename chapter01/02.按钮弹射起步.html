@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <button id="ease" class="move">ease(default)</button>
+        <button id="linear" class="move">linear</button>
+        <button id="ease-in" class="move">ease-in</button>
+        <button id="ease-out" class="move">ease-out</button>
+        <button id="ease-in-out" class="move">ease-in-out</button>
+    </div>
+</body>
+<style>
+    .container {
+        width: 2000px;
+        display: flex;
+        flex-direction: column;
+    }
+    .move {
+        margin: 2em;
+        width: 150px;
+        height: 50px;
+        padding: 10px 15px;
+        background-color: red;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+        border-radius: .5em;
+        font-size: 20px;
+        transition-property: translate();
+        transition-duration: 3s;
+    }
+
+    #ease {
+        /* 延时变化函数 */
+        /* 先慢 中间快 后慢 */
+        transition-timing-function: ease;
+    }
+    
+    #linear {
+        /* 延时变化函数 */
+        /* 一直一样快 */
+        transition-timing-function: linear;
+    }
+
+    #ease-in {
+        /* 延时变化函数 */
+        /* 一开始慢 然后快 */
+        transition-timing-function: ease-in;
+    }
+
+    #ease-out {
+        /* 延时变化函数 */
+        /* 一开始快 最后慢 */
+        transition-timing-function: ease-out;
+    }
+
+    #ease-in-out {
+        /* 延时变化函数 */
+        /* 先慢 中间快 后慢 */
+        transition-timing-function: ease-in-out;
+    }
+
+    /* 悬停 */
+    .move:hover {
+        /* 悬停后向右移动 */
+        transform: translate(1800px, 0);
+    }
+</style>
+</html>

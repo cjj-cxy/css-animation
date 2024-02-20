@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="trans">translate</button>
+</body>
+</html>
+<style>
+    button{
+        width: 600px;
+        height: 400px;
+        background-color: rgb(233, 239, 47);
+        font-size: 100px;
+        /* 转变属性 */
+        transition-property: background-color;
+        /* 转变的细节 */
+        transition-duration: 0.6s;
+    }
+
+    /* 悬停 */
+    button:hover{
+        background-color: rgb(6, 175, 6);
+    }
+</style>

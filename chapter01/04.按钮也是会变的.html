@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="trans">translate</button>
+</body>
+</html>
+<style>
+    button{
+        width: 600px;
+        height: 400px;
+        background-color: rgb(233, 239, 47);
+        font-size: 100px;
+        /* 转变属性 */
+        /* transition-property: background-color color width; */
+        /* 转变的细节 */
+        /* transition-duration: 2s; */
+        /* transition: all 2s; */
+
+        /* 参数解析
+            逗号分隔每一个需要变化的样式
+            第一个参数：变化样式的名称
+            第二个参数：变化转变的时间
+            第三个参数：变化的样式
+            第四个参数：延迟变化的时间
+        */
+        transition: background-color 2s ease-in,
+                    width 4s ease-in-out,
+                    color 2s ease-out 2s,
+                    border-radius 2s linear;
+    }
+
+    /* 悬停 */
+    button:hover{
+        background-color: rgb(6, 175, 6);
+        color: white;
+        width: 1200px;
+        border-radius: 50px;
+    }
+</style>
